@@ -29,5 +29,4 @@ jobs:
           script: 
             cd /home/farm
             echo 'Welcome to my very new server'
-            cd /home/farm
             sudo systemctl restart farm.service
