@@ -15,3 +15,19 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
+
+  deploy:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Flask app
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.SSH_USERNAME }}
+          script: |
+            pip install gunicorn flask
+            cd /home/winc-cd
+            #git pull
+            systemctl restart winc-cd
