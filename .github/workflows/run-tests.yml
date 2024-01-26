@@ -1,4 +1,4 @@
-name: Run Tests
+yname: Run Tests
 
 on: push
 jobs:
@@ -27,4 +27,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-            echo 'Welcome to my new server'
+            echo 'Welcome to my very new server'
