@@ -26,7 +26,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
-          script: 
+          script: |
             cd /home/farm
             echo 'Welcome to my very new server'
             sudo systemctl restart farm.service
