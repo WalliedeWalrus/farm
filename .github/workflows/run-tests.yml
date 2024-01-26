@@ -28,7 +28,3 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             echo 'Welcome to my server'
-            #pip install gunicorn flask
-            #cd /home/winc-cd
-            #git pull
-            #systemctl restart winc-cd
