@@ -30,3 +30,6 @@ jobs:
             pip install gunicorn flask
             cd /home/farm
             echo 'Welcome to my very new server'
+            cd /home/farm
+            git pull
+            sudo systemctl restart farm.service
