@@ -20,11 +20,13 @@ jobs:
     needs: run-tests
     runs-on: ubuntu-latest
     steps:
-      - name: SSH Remote Commands
+      - name: Deploy Flask app
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          key: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.SSH_USERNAME }}
           script: |
+            pip install gunicorn flask
+            cd /home/farm
             echo 'Welcome to my very new server'
