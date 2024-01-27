@@ -13,6 +13,6 @@ def farm():
     return render_template("farm.html", title="Farm")
 
 
-@app.route("/about", methods=["GET"])
+@app.route("/animals", methods=["GET"])
 def animals():
     return render_template("animals.html", title="About")
