@@ -6,13 +6,13 @@ app = Flask(__name__)
 
 @app.route("/home", methods=["GET"])
 def home():
-    return redirect(url_for("index"), 302)
+    return render_template("home.html", title="Home")
 
 @app.route("/", methods=["GET"])
-def index():
-    return render_template("index.html", title="Index")
+def farm():
+    return render_template("farm.html", title="Farm")
 
 
 @app.route("/about", methods=["GET"])
-def about():
-    return render_template("about.html", title="About")
+def animals():
+    return render_template("animals.html", title="About")
