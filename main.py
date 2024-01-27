@@ -2,6 +2,30 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def index():
-    return 'Hello, world! Hello, world! Het is me gelukt!'
+    return render_template("index.html", name_browser_tab="Index")
+
+
+@app.route("/home")
+def home():
+    return redirect(url_for("index"))
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html", name_browser_tab="About")
+
+
+@app.route("/cow")
+def cow():
+    return render_template("cow.html", name_browser_tab="Cow")
+
+
+@app.route("/dog")
+def dog():
+    return render_template("dog.html", name_browser_tab="Dog")
+
+@app.route("/pig")
+def pig():
+    return render_template("pig.html", name_browser_tab="Pig")
