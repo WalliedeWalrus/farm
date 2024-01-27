@@ -30,4 +30,5 @@ jobs:
             cd /home/winc-project/
             git pull
             echo 'Welcome to my very new server'
-            sudo systemctl restart farm.service
+            systemctl restart farm
+            systemctl status farm
