@@ -12,7 +12,10 @@ def home():
 def index():
     return render_template("index.html", title="Index")
 
-
-@app.route("/about", methods=["GET"])
+@app.route("/animals", methods=["GET"])
 def about():
-    return render_template("about.html", title="About")
+    return render_template("animals.html", title="Animals")
+
+@app.route("/farm", methods=["GET"])
+def about():
+    return render_template("farm.html", title="Farm")
