@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return render_template("home.html", title="Home")
 
-@app.route("/", methods=["GET"])
+@app.route("/farm", methods=["GET"])
 def farm():
     return render_template("farm.html", title="Farm")
 
