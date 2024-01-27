@@ -4,21 +4,15 @@ from flask import Flask, render_template, redirect, url_for
 # Create a Flask app inside `app`
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html", name_browser_tab="Index")
-
-
-@app.route("/home")
+@app.route("/home", methods=["GET"])
 def home():
-    return redirect(url_for("index"))
+    return redirect(url_for("index"), 302)
+
+@app.route("/", methods=["GET"])
+def index():
+    return render_template("index.html", title="Index")
 
 
-@app.route("/farm")
+@app.route("/about", methods=["GET"])
 def about():
-    return render_template("farm.html", name_browser_tab="Farm")
-
-
-@app.route("/animals")
-def cow():
-    return render_template("animals.html", name_browser_tab="Animals")
+    return render_template("about.html", title="About")
