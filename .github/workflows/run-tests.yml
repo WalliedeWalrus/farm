@@ -28,5 +28,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /home/farm
+            git pull
             echo 'Welcome to my very new server'
             sudo systemctl restart farm.service
