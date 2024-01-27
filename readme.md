@@ -2,7 +2,7 @@
 
 # Contineous Deployment with Github Actions, Flask and Digital Ocean Droplet
 
-This assignment was not just a walk in the park... I ran into a lot of errors that had to be investigated by a lot of reading. In the end I succeededto fix the problems but I'm glad the job is done. Though I learned a lot during the process.
+This assignment was not just a walk in the park... I ran into a lot of errors that had to be investigated by a lot of reading. In the end I succeeded to fix the problems but I'm glad the job is done. Though I learned a lot during the process.
 
 After running the droplet I had a hard time with GitHub Actions and combining it with the automated SSH authorisation. I tried to tackle this step by step but at some point although following the advised steps it simply wouldn't work. So I started from scratch with a new droplet and new repository. This time it worked like it should.
 
