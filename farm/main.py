@@ -1,31 +1,10 @@
+# Import what we need from flask
 from flask import Flask
 
+# Create a Flask app inside `app`
 app = Flask(__name__)
 
-@app.route("/")
+# Assign a function to be called when the path `/` is requested
+@app.route('/')
 def index():
-    return render_template("index.html", name_browser_tab="Index")
-
-
-@app.route("/home")
-def home():
-    return redirect(url_for("index"))
-
-
-@app.route("/about")
-def about():
-    return render_template("about.html", name_browser_tab="About")
-
-
-@app.route("/cow")
-def cow():
-    return render_template("cow.html", name_browser_tab="Cow")
-
-
-@app.route("/dog")
-def dog():
-    return render_template("dog.html", name_browser_tab="Dog")
-
-@app.route("/pig")
-def pig():
-    return render_template("pig.html", name_browser_tab="Pig")
+    return 'Hello, world! its me again are you still there still am new version'
