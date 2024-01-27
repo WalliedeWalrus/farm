@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  # Meta
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  # stylesheet style.css in static folder
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='style.css') }}"
+  />
+
+  <body>
+    <h1>Welcome at my little farm page</h1>
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/farm">Farm</a></li>
+      <li><a href="/animals">Animals</a></li>
+    </ul>
+    {% block content %} {% endblock %}
+  </body>
+</html>
