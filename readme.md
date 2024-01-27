@@ -4,7 +4,7 @@
 
 This assignment was not just a walk in the park... I ran into a lot of errors that had to be investigated by a lot of reading and trying and testing. In the end I succeeded to fix the problems but I'm glad the job is done. Though I learned a lot during the process and that's a good thing.
 
-After running the droplet I had a hard time with GitHub Actions and combining it with the automated SSH authorisation. I tried to tackle this problem step by step but at some point, although following the advised steps, it simply wouldn't work. So I started from scratch with a new droplet and new repository. This time it worked like it should.
+After running the droplet (64.226.66.9) I had a hard time with GitHub Actions and combining it with the automated SSH authorisation. I tried to tackle this problem step by step but at some point, although following the advised steps, it simply wouldn't work. So I started from scratch with a new droplet and new repository. This time it worked like it should.
 
 I registered 3 secrets ssh_username ssh_key and ssh_host
 
